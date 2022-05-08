@@ -92,6 +92,10 @@ public class Track {
         return String.format("%02d", num);
     }
 
+    public String toString() {
+        return getString();
+    }
+
     private String createString(String title, String writer, String performer, int min, int sec) {
         String space = " ";
         return formatString(title)
@@ -101,4 +105,6 @@ public class Track {
                 + space + formatString(performer)
                 + space + "(" + formatString(min) + ":" + formatString(sec) + ")";
     }
+
+
 }
